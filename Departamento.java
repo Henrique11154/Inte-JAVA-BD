@@ -1,7 +1,6 @@
-package br.edu.iftm.javaempresax.classes;
+package br.edu.iftm.javaempresaX.classes;
 
 import java.util.Date;
-
 
 public class Departamento {
 
@@ -10,7 +9,8 @@ public class Departamento {
     private int codGerente;
     private Date dataGerente;
 
-    public Departamento(){}
+    public Departamento() {
+    }
 
     public Departamento(int codigo, String nome, int codGerente, Date dataGerente) {
         this.codigo = codigo;
@@ -53,8 +53,11 @@ public class Departamento {
 
     @Override
     public String toString() {
-        return "Departamento [codGerente=" + codGerente + ", codigo=" + codigo + ", dataGerente=" + dataGerente
-                + ", nome=" + nome + "]";
+        return "Departamento{" +
+                "codigo=" + codigo +
+                ", nome='" + nome + '\'' +
+                ", codGerente=" + codGerente +
+                ", dataGerente=" + dataGerente +
+                '}';
     }
-    
 }

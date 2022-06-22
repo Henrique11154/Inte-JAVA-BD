@@ -1,26 +1,24 @@
-package br.edu.iftm.javaempresax.classes;
+package br.edu.iftm.javaempresaX.classes;
 
 import java.util.Date;
 
-public class Empregado{
+public class Empregado {
 
     private int codigo;
     private String nome;
     private Date datanasc;
     private String endereco;
-    private char sexo;
+    private String sexo;
     private double salario;
     private int codSuperv;
-    private int codDepto;
     private Departamento departamento;
-   
-    public Empregado(){
 
+    public Empregado() {
     }
 
-    
-    public Empregado(int codigo, String nome, Date datanasc, String endereco, char sexo, double salario, int codSuperv,
-            int codDepto, Departamento departamento) {
+    public Empregado(int codigo, String nome, Date datanasc, String endereco,
+                     String sexo, double salario, int codSuperv,
+                     Departamento departamento) {
         this.codigo = codigo;
         this.nome = nome;
         this.datanasc = datanasc;
@@ -28,10 +26,8 @@ public class Empregado{
         this.sexo = sexo;
         this.salario = salario;
         this.codSuperv = codSuperv;
-        this.codDepto = codDepto;
         this.departamento = departamento;
     }
-
 
     public int getCodigo() {
         return codigo;
@@ -65,11 +61,11 @@ public class Empregado{
         this.endereco = endereco;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
@@ -89,14 +85,6 @@ public class Empregado{
         this.codSuperv = codSuperv;
     }
 
-    public int getCodDepto() {
-        return codDepto;
-    }
-
-    public void setCodDepto(int codDepto) {
-        this.codDepto = codDepto;
-    }
-
     public Departamento getDepartamento() {
         return departamento;
     }
@@ -107,10 +95,15 @@ public class Empregado{
 
     @Override
     public String toString() {
-        return "Empregado [codDepto=" + codDepto + ", codSuperv=" + codSuperv + ", codigo=" 
-        + codigo + ", datanasc="+ datanasc + ", departamento=" + departamento + ", endereco=" + 
-        endereco + ", nome=" + nome + ", salario=" + salario + ", sexo=" + sexo + "]";
+        return "Empregado{" +
+                "codigo=" + codigo +
+                ", nome='" + nome + '\'' +
+                ", datanasc=" + datanasc +
+                ", endereco='" + endereco + '\'' +
+                ", sexo=" + sexo +
+                ", salario=" + salario +
+                ", codSuperv=" + codSuperv +
+                ", departamento=" + departamento +
+                '}';
     }
-
-    
 }
